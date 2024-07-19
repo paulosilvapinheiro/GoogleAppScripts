@@ -1,0 +1,11 @@
+function helloWorldHtmlServic(){
+  
+  var ui = DocumentApp.getUi();
+  var html = HtmlService.createTemplateFromFile('sideBar').evaluate()
+      .setTitle('Sidebar Example').setWidth(300)
+      .setSandboxMode(HtmlService.SandboxMode.NATIVE);
+
+  ui.showSidebar(html);
+}
+
+/* Necessário configurar um gatilho [ao abrir documento] por exemplo */

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      try{
+        hiUser("Welcome guest!");
+      }catch(e){
+
+        google.script.run.logErrors(e.toString());
+
+      }
+    </script>
+  </head>
+  <body>
+    Hello Error!!!
+  </body>
+</html>

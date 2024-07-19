@@ -1,0 +1,29 @@
+function doGet() {
+  
+  try{
+
+    var html = HtmlService.createTemplateFromFile('index').evaluate()
+    .setTitle('Web App - Error Handler').setSandboxMode(HtmlService.SandboxMode.NATIVE);
+
+    var x = t;
+
+  }catch(e){
+
+    // html.setContent('<h1> Ops alguma coisa deu errada !!!</h1>'
+    //                   + '<span> <p><b>O erro foi aqui:</b></p> <span><br>'
+    //                   + e.stack);
+
+    logErrors(e);
+  }
+  
+  return html;
+}
+
+function logErrors(e){
+
+    var errorSheet = SpreadsheetApp.openById('1tI4Woyc-wiCb0OV6YljIbAHqfsmCCJzXbEj-Nm0chSk')
+      .getSheetByName('erros');
+
+    var cell = errorSheet.getRange('A1').offset(errorSheet.getLastRow(),0);
+    cell.setValue(new Date() + " function doGet: " + e);
+}
