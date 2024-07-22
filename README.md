@@ -4,13 +4,13 @@ Este projeto visa documentar o estudo e as caracteristicas aprendidas no livro [
 
 ## Introdução
 
-Os itens:
+Os itens abaixo são exemlos de introdução aos conceitos Básicos:
 
--Container-Bound
--ErrorHandler
--WebApp
+- Container-Bound
+- ErrorHandler
+- WebApp
 
-São exemlos de introdução aos conceitos Básicos, já o conteúdo da seção "Building Enterprise Applications" contém um conteúdo mais profundo, trazendo exemplos do dia a dia e práticos.
+O conteúdo da seção "Building Enterprise Applications" contém um conteúdo mais profundo, trazendo exemplos do dia a dia e práticos.
 
 + Building Enterprise Applications (em construção)
     + Dynamic Details
