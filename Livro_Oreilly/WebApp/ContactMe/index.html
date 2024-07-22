@@ -1,0 +1,26 @@
+<div id = "subscribe_form">
+  <form id = "email_subscribe">
+    <input type="email" name="email" id="email" placeholder="Enter your e-mail">
+    <input type="submit" value="Subscribe">
+  </form>
+  <span id="thank_you" hidden="true">Thank you!</span>
+</div>
+<?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+
+  $(document).ready(function(){
+    $("#email_subscribe").submit(function(){
+        google.script.run.withSuccessHandler(function(ret){
+            
+            $("#thank_you").show("slow");
+            $("#email_subscribe").slideUp();
+            console.log(ret);
+
+        }).addEmail(this);//[this] => is the form element
+        return false;
+    });
+  });
+</script>

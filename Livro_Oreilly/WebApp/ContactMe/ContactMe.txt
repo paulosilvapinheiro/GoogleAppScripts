@@ -1,0 +1,18 @@
+function doGet() {
+  
+  var html = HtmlService.createTemplateFromFile('index').evaluate()
+    .setTitle('Web App').setSandboxMode(HtmlService.SandboxMode.NATIVE);
+
+  return html;
+}
+
+function addEmail (form){
+
+  var ss = SpreadsheetApp.openByUrl('colocar_planilha_destino').getSheets()[0];
+  var range = ss.getRange(ss.getLastRow()+1,1,1,2);
+  var values = [[new Date(),form.email]];
+  range.setValues(values);
+
+  Logger.log(form.email);
+  return form.email;
+}

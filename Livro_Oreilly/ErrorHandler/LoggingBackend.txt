@@ -21,7 +21,7 @@ function doGet() {
 
 function logErrors(e){
 
-    var errorSheet = SpreadsheetApp.openById('1tI4Woyc-wiCb0OV6YljIbAHqfsmCCJzXbEj-Nm0chSk')
+    var errorSheet = SpreadsheetApp.openById('colocar_id_da_planilha')
       .getSheetByName('erros');
 
     var cell = errorSheet.getRange('A1').offset(errorSheet.getLastRow(),0);
